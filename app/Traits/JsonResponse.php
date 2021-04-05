@@ -11,13 +11,7 @@ trait JsonResponse
 {
     public function successResponse($data, $statusCode = Response::HTTP_OK): \Illuminate\Http\JsonResponse
     {
-        $response = [
-            "data" => $data,
-        ];
-        return response()->json(
-            ["data" => $data],
-            $statusCode
-        );
+        return response()->json($data, $statusCode);
     }
 
     public function errorResponse($data = null, $message = null, $statusCode = Response::HTTP_BAD_REQUEST): \Illuminate\Http\JsonResponse
