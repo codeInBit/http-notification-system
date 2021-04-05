@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Http;
 
 class Publish implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
 
     protected $topic;
     protected $subscribers;
@@ -27,7 +30,7 @@ class Publish implements ShouldQueue
     {
         $this->topic = $topic;
         $this->subscribers = $subscribers;
-        $this->data = $payload;
+        $this->payload = $payload;
     }
 
     /**

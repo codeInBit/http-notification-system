@@ -15,8 +15,8 @@ class SubscriberControllerTest extends TestCase
     public function testSubscribeToNewTopic()
     {
         $this->withExceptionHandling();
-        $topic = 
-        $response = $this->post('/api/subscribe/topic' .Str::random(3), [
+        $topic =
+        $response = $this->post('/api/subscribe/topic' . Str::random(3), [
             "url" => "https://subscriber.site/09742acc-754e-41b8-922a-7300663604d3"
         ]);
 

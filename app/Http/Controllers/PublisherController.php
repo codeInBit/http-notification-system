@@ -18,8 +18,8 @@ class PublisherController extends Controller
      * @return JsonResponse
      */
     public function publish(PublisherRequest $request, $topic): JsonResponse
-    {     
-        try {   
+    {
+        try {
             $topicObj = Topic::whereSlug(Str::slug($topic))->first();
             if (!$topicObj) {
                 return $this->errorResponse([], 'This topic does not exist', Response::HTTP_NOT_FOUND);
