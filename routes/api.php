@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::post('/subscribe/{topic}', 'SubscriberController@subscribe');
 
 // Publisher
-Route::get('/publish/{topic}', 'PublisherController@publish');
+Route::post('/publish/{topic}', 'PublisherController@publish');
